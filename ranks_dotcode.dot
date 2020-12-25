@@ -1,4 +1,4 @@
-digraph vanchi {
+digraph ranking {
 	A -> F;
 	B -> G;
 	C -> A;

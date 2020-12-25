@@ -48,10 +48,10 @@ print("Removal rules\n", list(sorted(rules)))
 print("Minimal      \n", list(sorted(set(rels)^removables)))
 minimal = sorted(set(rels) ^ removables)
 
-with open("vanchi.dot", "w") as f:
-    print("digraph vanchi {", file=f)
+with open("ranks_dotcode.dot", "w") as f:
+    print("digraph ranking {", file=f)
     for relation in minimal:
         print("\t%s -> %s;" %(relation[0], relation[1]), file=f)
     print("}", file=f)
 
-os.system("dot -T png -o vanchi.png vanchi.dot")
+os.system("dot -T png -o ranks_graph.png ranks_dotcode.dot")
